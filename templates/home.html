@@ -1,0 +1,104 @@
+<html>
+<head>
+<title>my satisfaction degree project </title>
+<style>
+body {
+	width: 100%;
+	height:auto;
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	font-size: 18px;
+	text-align:center;
+	letter-spacing:1.2px;
+    background-color: #A9C3ED;
+
+
+
+}
+ input {
+	width: 500px;
+	margin-bottom: 10px;
+	background: rgba(0,0,0,0.7);
+	border: none;
+	outline: none;
+	padding: 15px;
+	font-size: 13px;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+	border: 3px solid greenyellow;
+	border-radius: 20px;
+	box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+	-webkit-transition: box-shadow .5s ease;
+	-moz-transition: box-shadow .5s ease;
+	-o-transition: box-shadow .5s ease;
+	-ms-transition: box-shadow .5s ease;
+	transition: box-shadow .5s ease;
+
+}
+ h1 {
+      text-align: center;
+      color: white;
+      text-transform: uppercase;
+      font-size: 40px;
+      text-shadow: 2px 2px 4px black;
+      animation: bounceIn 2s infinite alternate;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    @keyframes bounceIn {
+      0% {
+        transform: scale(0.1);
+        opacity: 0;
+      }
+
+      60% {
+        transform: scale(1.2);
+        opacity: 1;
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+</style>
+    <title>Title</title>
+</head>
+<body>
+<h1>Predict the satisfaction degree of travelers </h1>
+	  <form action="{{ url_for('predict') }}" method="post">
+
+          <div><label >Gender:</label><br><input type="text" name="Gender"> </div>
+          <div><label >customer_type:</label><br><input type="text" name="customer_type"> </div>
+          <div><label >age:</label><br><input type="text" name="age" > </div>
+           <div> <label >type_of_travel:</label><br><input type="text" name="type_of_travel"></div>
+          <div> <label >customer_class:</label> <br><input type="text" name="customer_class"></div>
+          <div> <label >flight_distance:</label><br><input type="text" name="flight_distance"></div>
+            <div> <label >inflight_wifi_service:</label><br><input type="text" name="inflight_wifi_service"></div>
+            <div> <label >departure_arrival_time_convenient:</label><br><input type="text" name="departure_arrival_time_convenient"></div>
+            <div> <label >inflight_wifi_service:</label><br><input type="text" name="inflight_wifi_service"></div>
+            <div> <label >ease_of_online_booking:</label><br><input type="text" name="ease_of_online_booking"></div>
+            <div> <label >gate_location:</label><br><input type="text" name="gate_location"></div>
+            <div> <label >food_and_drink:</label><br><input type="text" name="food_and_drink"></div>
+            <div> <label >online_boarding:</label><br><input type="text" name="online_boarding"></div>
+            <div> <label >seat_comfort:</label><br><input type="text" name="seat_comfort"></div>
+
+            <div> <label >inflight_entertainment:</label><br><input type="text" name="inflight_entertainment"></div>
+            <div> <label >onboard_service:</label><br><input type="text" name="onboard_service"></div>
+            <div> <label >leg_room_service:</label><br><input type="text" name="leg_room_service"></div>
+            <div> <label >baggage_handling:</label><br><input type="text" name="baggage_handling"></div>
+            <div> <label >checkin_service:</label><br><input type="text" name="checkin_service"></div>
+            <div> <label >inflight_service:</label><br><input type="text" name="inflight_service"></div>
+<div> <label >cleanliness:</label><br><input type="text" name="cleanliness"></div>
+            <div> <label >departure_delay_in_minutes:</label><br><input type="text" name="departure_delay_in_minutes"></div>
+
+            <div> <label >arrival_delay_in_minutes:</label><br><input type="text" name="arrival_delay_in_minutes"></div>
+
+
+
+<br>
+
+    <button type="submit" class="btn">Predict</button>
+      </form>
+
+</body>
+</html>
